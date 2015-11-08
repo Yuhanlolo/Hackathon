@@ -36,24 +36,24 @@
             <div class="row">
                 <!-- vertical tab -->
 
-                    <div class="col-lg-4 col-md-4 bhoechie-tab-container" style = "margin-left:0px; background-color: #F99359; height:500px">
+                    <div class="col-lg-4 col-md-4 bhoechie-tab-container tabcontent">
                         <div class="col-lg-3 col-md-3 bhoechie-tab-menu">
                             <div class="list-group">
                                 <a href=" " class="list-group-item active text-center tabbutton">
-                                    <p>BACKGROUND</p>
+                                    <p class="tabtext">BACKGROUND</p>
                                 </a >
                                 <a href="#" class="list-group-item text-center tabbutton">
-                                    <p>TEXT STYLE</p>
+                                    <p class="tabtext">TEXT STYLE</p>
                                 </a >
                                 <a href="#" class="list-group-item text-center tabbutton">
-                                    <p>PENDANTS</p>
+                                    <p class="tabtext">PENDANTS</p>
                                 </a >
                                 <a href="#" class="list-group-item text-center tabbutton">
-                                    <p>PREVIEW</p>
+                                    <p class="tabtext">PREVIEW</p>
                                 </a >
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-9 bhoechie-tab" style="padding:0; height:498px;background-color:white">
+                        <div class="col-lg-9 col-md-9 bhoechie-tab thunmbnailimg">
 
                             <div class="bhoechie-tab-content active">
 
@@ -79,7 +79,18 @@
 
                             <div class="bhoechie-tab-content">
                                 <center>
-                                    <a class="btn btn-default" id="btn1" role="button" href="#">Test BTN</a>
+                                    <div style="margin-bottom: 30px">
+                                        <form>
+                                            <fieldset class="form-group">
+                                                <label for="emailInput" class="previewfont">Send Thanksgiving Greeting to Your Friend</label>
+                                                <input type="email" class="form-control" id="emailInput" placeholder="Email">
+                                            </fieldset>
+                                            <button type="submit" class="btn btn-warning btn150">Send to Friend</button>
+                                        </form>
+                                    </div>
+
+                                    <p class="previewfont">You can also save the static image to your computer.</p>
+                                    <a class="btn btn-warning btn150" id="btn1" role="button" href="#" >Save to Computer</a>
                                 </center>
                             </div>
 
@@ -91,7 +102,7 @@
                         <div id="mycard">
                             <div class="ecard">
 
-                                <div class="text" style="font-size:14em;color:#ffffff;position: absolute;padding-left:40px;margin-right:auto;padding-top:40px;">
+                                <div class="text">
 
                                     <h3>Can Can Shi Ben Dan</h3>
                                 </div>
