@@ -131,11 +131,16 @@ p,a,h1,h2,h3,h4 {
     padding-left: 40px;
     margin-right: auto;
     padding-top: 40px;
+
+
 }
 
 .thumbimg {
     width:100%;
     padding: 10px 15px 10px 10px;
+    border: 1px dotted #F99359;
+    border-radius: 4px;
+    margin-top: 15px;
 }
 
 .btn150 {
@@ -145,4 +150,21 @@ p,a,h1,h2,h3,h4 {
 .previewfont {
     font-size: 16px;
     color: #FB7125;
+}
+
+.textbox {
+    border:2px solid #F99359;
+    border-radius: 3px;
+}
+
+#textinput {
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+    padding: 0;
+    border-radius: 3px;
+    position: absolute;
+    right: -20px;
+    bottom: -10px;
+
 }

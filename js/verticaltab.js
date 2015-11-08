@@ -152,6 +152,9 @@ $(document).ready(function() {
         var index = $(this).index();
         $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
         $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+
+        /*add border and edit button to text editor*/
+        $(".text").css("border", "1px s")
     });
 
     catimagelib.namelist = function() {
@@ -197,7 +200,7 @@ $(document).ready(function() {
         var Dtop = textlib.styles[idnumber].y;
         var Fsize = textlib.styles[idnumber].size;
         var FFamiy = textlib.styles[idnumber].family;
-        $(".text").children().css({'font-size':Fsize, 'color':textcolor, 'font-family':FFamiy, 'padding-left':Dleft, 'padding-top':Dtop});      
+        $(".text").css({'font-size':Fsize, 'color':textcolor, 'font-family':FFamiy, 'padding-left':Dleft, 'padding-top':Dtop});
     });
 
 });

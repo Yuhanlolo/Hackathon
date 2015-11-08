@@ -24,7 +24,7 @@
                 <div class="span12 text-center"
                      style="font-size:14em;color:#ffffff;">
                     <h3 style="margin-left:200px;padding-top:40px">
-                        Say Hi to Thanksgiving
+                        <span class="glyphicon glyphicon-heart"></span> HAPPY THANKSGIVING! <span class="glyphicon glyphicon-star"></span>
                     </h3>
                 </div>
             </div>
@@ -101,8 +101,11 @@
                             <div class="ecard">
 
                                 <div class="text">
+                                    <div class="textbox">
+                                        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal" id="textinput">edit<span class="glyphicon glyphicon-pencil"></span></button>
+                                        <h3 id="greetingshow">Can Can Shi Ben Dan</h3>
+                                    </div>
 
-                                    <h3>Can Can Shi Ben Dan</h3>
                                 </div>
                                 <img src="images/bg1.jpg" class="img-responsive" id="0" >
 
@@ -113,6 +116,28 @@
                 </div>
                 </div>
                 <!-- botttom-right -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" style="background-color: #F99259; -webkit-border-radius: 4px 4px 0 0;color: white">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Input Your Thanksgiving Greetings to Your Friend</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <input class="form-control inputtext" id="inputgreeting" type="text">
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-warning" data-dismiss="modal" id="save">Save</button>
+                        </div>
+                    </div>
 
 
 
@@ -123,6 +148,7 @@
 
     <script type="text/javascript">
 
+        /*click save to image*/
     $("#btn1").on("click", function(event) {
         html2canvas(document.getElementById("mycard"), {
             onrendered: function (canvas) {
@@ -131,6 +157,15 @@
             }
         });
     });
+
+    /* click change text content*/
+    $("#save").on("click", function( ) {
+        var getValue = document.getElementById("inputgreeting").value;
+        var endValue=((getValue.replace(/<(.+?)>/gi,"&lt;$1&gt;")).replace(/ /gi,"&nbsp;")).replace(/\n/gi,"<br>");
+        document.getElementById("greetingshow").innerHTML=endValue;
+    });
+
+
 
     </script>
 
