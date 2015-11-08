@@ -25,8 +25,39 @@ var catimagelib = {
     ]
 };
 
+var textlib = {
+    textstyles : [],
+    "styles" : [
+        {
+            "name" : "style1",
+            "link" : "images/style1.jpg",
+            "color": "#ffffff",
+           
+        },
+        {
+            "name" : "style2",
+            "link" : "images/style2.jpg",
+            "color": "#F99259",
+        },
+        {
+            "name" : "style3",
+            "link" : "images/style3.jpg",
+            "color": "#ffffff",
+           
+        },
+        {
+            "name" : "style4",
+            "link" : "images/style4.jpg",
+            "color": "#F99259",
+           
+        }
+        
+    ]
+};
 
-var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="clickindex">';
+
+var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="backgroundindex">';
+var textstyleitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="textindex">';
 
 
 $(document).ready(function() {
@@ -46,18 +77,30 @@ $(document).ready(function() {
         $('.background').append(catlistitem);
       }
     };
+    textlib.stylelist = function() {
+      for (ts in textlib.styles) {
+        var styleitem = textstyleitemPH.replace("%data%" , textlib.styles[ts].link).replace("%number%" , ts);
+        textlib.textstyles[ts] = textlib.styles[ts].name;
+        $('.greetingtext').append(styleitem);
+      }
+    };
 
     catimagelib.namelist();
+    textlib.stylelist();
     //$(".background").children().first().addClass("active");
 
-    $(".clickindex").click(
+    $(".backgroundindex").click(
     function () {
         var idnumber = $(this).attr('id');
-        console.log(idnumber);
-        //$(".ecard").removeClass('active');
-        //$(this).addClass('active');
         var catimagelink = catimagelib.images[idnumber].link;
         $(".ecard").children().attr("src" , catimagelink).attr("id", idnumber);
+    });
+
+    $(".textindex").click(
+    function () {
+        var idnumber = $(this).attr('id');
+        var textcolor = textlib.styles[idnumber].color;
+        $(".text").children().css({color:textcolor});
     });
 
 });
