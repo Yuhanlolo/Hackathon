@@ -25,11 +25,9 @@ var catimagelib = {
     ]
 };
 
-<<<<<<< HEAD
-var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100">';
-=======
+
 var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="clickindex">';
->>>>>>> origin/master
+
 
 $(document).ready(function() {
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
