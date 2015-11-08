@@ -2,28 +2,46 @@ var catimagelib = {
     nameitems : [],
     "images" : [
         {
+            "name" : "bg0",
+            "link" : "images/card0.png",
+            "x":"300px",
+            "y":"100px",
+        },
+        {
             "name" : "bg1",
-            "link" : "images/bg1.jpg",
-            "x":"500px",
-            "y":"60px",
+            "link" : "images/card1.png",
+            "x":"250px",
+            "y":"230px",
         },
         {
             "name" : "bg2",
-            "link" : "images/bg2.jpg",
-            "x":"240px",
-            "y":"130px",
+            "link" : "images/card2.png",
+            "x":"250px",
+            "y":"200px",
         },
         {
             "name" : "bg3",
-            "link" : "images/bg3.jpg",
-            "x":"230px",
-            "y":"130px",
+            "link" : "images/card3.png",
+            "x":"250px",
+            "y":"250px",
         },
         {
             "name" : "bg4",
-            "link" : "images/bg4.jpg",
-            "x":"250px",
+            "link" : "images/card4.png",
+            "x":"110px",
             "y":"110px",
+        },
+        {
+            "name" : "bg5",
+            "link" : "images/card5.png",
+            "x":"270px",
+            "y":"270px",
+        },
+        {
+            "name" : "bg6",
+            "link" : "images/card6.png",
+            "x":"280px",
+            "y":"240px",
         }
         
     ]
@@ -139,7 +157,7 @@ var plib = {
     ]
 };
 
-var catlistitemPH = '<img src="%data%" id = "%number%" class="backgroundindex thumbimg">';
+var catlistitemPH = '<img src="%data%" id = "%number%" style = "width: 92%" class="backgroundindex thumbimg">';
 var textstyleitemPH = '<img src="%data%" id = "%number%" class="textindex thumbimg">';
 var pendantitemPH = '<img src="%data%" id = "%number%" style = "width: 100px; height: 100px" class="pendantindex thumbimg">';
 
