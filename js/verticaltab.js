@@ -222,5 +222,17 @@ $(document).ready(function() {
         $(".text").css({'font-size':Fsize, 'color':textcolor, 'font-family':FFamiy});
     });
 
+    $(".pendantindex").click(
+        function () {
+            var transferimg = $(this).clone();
+            var absolutepend = transferimg.css("position", "absolute");
+            absolutepend.prependTo(".wrappers");
+            var cloneimg = $(".wrappers").children().first();
+            console.log(cloneimg);
+            cloneimg.addClass("draggable");
+            cloneimg.css("border", "0px solid white");
+            $(".draggable").draggable({ snap : ".wrappers"});
+        }
+    )
 });
 

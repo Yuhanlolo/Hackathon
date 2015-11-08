@@ -83,7 +83,7 @@ div.bhoechie-tab div.bhoechie-tab-content:not(.active){
 }
 
 p,a,h1,h2,h3,h4 {
-  font-family: font-family: 'Raleway', sans-serif;
+  font-family: font-family, 'Raleway', sans-serif;
 }
 
 .tabtext {
@@ -153,18 +153,24 @@ p,a,h1,h2,h3,h4 {
 }
 
 .textbox {
-    border:2px solid #F99359;
+
     border-radius: 3px;
 }
 
 #textinput {
+    float: left;
     width: 40px;
     height: 20px;
+    border-radius:2px;
     font-size: 10px;
     padding: 0;
-    border-radius: 3px;
-    position: absolute;
-    right: -20px;
-    bottom: -10px;
+    display: none;
 
+
+}
+
+.wrappers {
+    position: absolute;
+    left: 0;
+    top:0;
 }
