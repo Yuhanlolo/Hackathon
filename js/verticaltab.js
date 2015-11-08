@@ -8,9 +8,19 @@ $(document).ready(function() {
         $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
     $( "div.bhoechie-tab>div.bhoechie-tab-content" ).click(function() {
-  		var index = $(this).index();
-  		$(".ecard").show();
-
-	});
+      var index = $(this).index();
+      $(".ecard").show();
+    });
+    $("#btn1").on("click", function(event) {
+      html2canvas(document.getElementById("mycard"), {
+      onrendered: function(canvas) {
+      var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+      window.location.href=img; 
+        }
+    });
+    });
 });
+
+
+
 
