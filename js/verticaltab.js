@@ -25,7 +25,11 @@ var catimagelib = {
     ]
 };
 
+<<<<<<< HEAD
 var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100">';
+=======
+var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="clickindex">';
+>>>>>>> origin/master
 
 $(document).ready(function() {
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
@@ -47,9 +51,16 @@ $(document).ready(function() {
 
     catimagelib.namelist();
     //$(".background").children().first().addClass("active");
+<<<<<<< HEAD
     $(".background").click(
     function () {
         var idnumber = $(this).attr('id');
+=======
+    $(".clickindex").click(
+    function () {
+        var idnumber = $(this).attr('id');
+        console.log(idnumber);
+>>>>>>> origin/master
         //$(".ecard").removeClass('active');
         //$(this).addClass('active');
         var catimagelink = catimagelib.images[idnumber].link;
