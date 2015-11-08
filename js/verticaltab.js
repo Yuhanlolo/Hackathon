@@ -20,19 +20,7 @@ var catimagelib = {
             "name" : "bg4",
             "link" : "images/bg4.jpg",
            
-        },
-        {
-            "name" : "bg5",
-            "link" : "images/style1.jpg",
-
-        },
-        {
-            "name" : "bg6",
-            "link" : "images/style2.jpg",
-
         }
-
-
         
     ]
 };
@@ -41,34 +29,72 @@ var textlib = {
     textstyles : [],
     "styles" : [
         {
-            "name" : "style1",
-            "link" : "images/style1.jpg",
-            "color": "#ffffff",
-            "x":"0px",
-            "y":"0px",
+            "name" : "style0",
+            "link" : "images/style0.png",
+            "color": "#bf567d",
+            "size" : "23px",
+            "family":"Noteworthy",
+            "x":"500px",
+            "y":"60px",
            
         },
         {
+            "name" : "style1",
+            "link" : "images/style1.png",
+            "color": "#3e4754",
+            "size" : "28px",
+            "family":"Tekton Pro",
+            "x":"240px",
+            "y":"130px",
+        },
+        {
             "name" : "style2",
-            "link" : "images/style2.jpg",
-            "color": "#F99259",
-            "x":"40px",
-            "y":"0px",
+            "link" : "images/style2.png",
+            "color": "#ffffff",
+            "size" : "35px",
+            "family":"optima",
+            "x":"230px",
+            "y":"130px",
+           
         },
         {
             "name" : "style3",
-            "link" : "images/style3.jpg",
+            "link" : "images/style3.png",
             "color": "#ffffff",
-            "x":"0px",
-            "y":"40px",
+            "size" : "28px",
+            "family":"Nueva Std",
+            "x":"250px",
+            "y":"110px",
            
         },
         {
             "name" : "style4",
-            "link" : "images/style4.jpg",
-            "color": "#F99259",
-            "x":"40px",
-            "y":"40px",
+            "link" : "images/style4.png",
+            "color": "#542306",
+            "size" : "28px",
+            "family":"Trajan Pro",
+            "x":"0px",
+            "y":"0px",
+           
+        },
+        {
+            "name" : "style5",
+            "link" : "images/style5.png",
+            "color": "#5f3912",
+            "size" : "28px",
+            "family":"Times New Roman",
+            "x":"250px",
+            "y":"50px",
+           
+        },
+        {
+            "name" : "style6",
+            "link" : "images/style6.png",
+            "color": "#000000",
+            "size" : "24px",
+            "family":"Snell Roundhand",
+            "x":"250px",
+            "y":"110px",
            
         }
         
@@ -76,8 +102,8 @@ var textlib = {
 };
 
 
-var catlistitemPH = '<img src="%data%" id = "%number%" width="100%" class="backgroundindex" style="padding-top:10px; padding-bottom:10px">';
-var textstyleitemPH = '<img src="%data%" id = "%number%" width="100%" class="textindex" style="padding-top:10px; padding-bottom:10px">';
+var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="backgroundindex">';
+var textstyleitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="textindex">';
 
 
 $(document).ready(function() {
@@ -122,11 +148,10 @@ $(document).ready(function() {
         var textcolor = textlib.styles[idnumber].color;
         var Dleft = textlib.styles[idnumber].x;
         var Dtop = textlib.styles[idnumber].y;
-        $(".text").children().css({color:textcolor});
-        $(".text").children().css({'padding-left':Dleft});
-        $(".text").children().css({'padding-top':Dtop});
+        var Fsize = textlib.styles[idnumber].size;
+        var FFamiy = textlib.styles[idnumber].family;
+        $(".text").children().css({'font-size':Fsize, 'color':textcolor, 'font-family':FFamiy, 'padding-left':Dleft, 'padding-top':Dtop});      
     });
 
 });
-
 
