@@ -32,23 +32,31 @@ var textlib = {
             "name" : "style1",
             "link" : "images/style1.jpg",
             "color": "#ffffff",
+            "x":"0px",
+            "y":"0px",
            
         },
         {
             "name" : "style2",
             "link" : "images/style2.jpg",
             "color": "#F99259",
+            "x":"40px",
+            "y":"0px",
         },
         {
             "name" : "style3",
             "link" : "images/style3.jpg",
             "color": "#ffffff",
+            "x":"0px",
+            "y":"40px",
            
         },
         {
             "name" : "style4",
             "link" : "images/style4.jpg",
             "color": "#F99259",
+            "x":"40px",
+            "y":"40px",
            
         }
         
@@ -100,7 +108,11 @@ $(document).ready(function() {
     function () {
         var idnumber = $(this).attr('id');
         var textcolor = textlib.styles[idnumber].color;
+        var Dleft = textlib.styles[idnumber].x;
+        var Dtop = textlib.styles[idnumber].y;
         $(".text").children().css({color:textcolor});
+        $(".text").children().css({'padding-left':Dleft});
+        $(".text").children().css({'padding-top':Dtop});
     });
 
 });
