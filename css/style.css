@@ -132,3 +132,8 @@ p,a,h1,h2,h3,h4 {
     margin-right: auto;
     padding-top: 40px;
 }
+
+.thumbimg {
+    width:100%;
+    padding: 10px 15px 10px 10px;
+}

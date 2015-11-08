@@ -102,8 +102,8 @@ var textlib = {
 };
 
 
-var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="backgroundindex">';
-var textstyleitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="textindex">';
+var catlistitemPH = '<img src="%data%" id = "%number%" class="backgroundindex thumbimg">';
+var textstyleitemPH = '<img src="%data%" id = "%number%" class="textindex thumbimg">';
 
 
 $(document).ready(function() {
