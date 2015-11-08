@@ -141,7 +141,7 @@ var plib = {
 
 var catlistitemPH = '<img src="%data%" id = "%number%" class="backgroundindex thumbimg">';
 var textstyleitemPH = '<img src="%data%" id = "%number%" class="textindex thumbimg">';
-var pendantitemPH = '<img src="%data%" id = "%number%" width:100px height:100px class="pendantindex thumbimg">';
+var pendantitemPH = '<img src="%data%" id = "%number%" style = "width: 100px; height: 100px" class="pendantindex thumbimg">';
 
 
 $(document).ready(function() {
