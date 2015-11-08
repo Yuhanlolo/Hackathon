@@ -102,8 +102,46 @@ var textlib = {
 };
 
 
+var plib = {
+    pitems : [],
+    "p" : [
+        {
+            "name" : "pendant0",
+            "link" : "image/00.png",
+           
+        },
+        {
+            "name" : "pendant1",
+            "link" : "image/1.png",
+           
+        },
+        {
+            "name" : "pendant2",
+            "link" : "image/2.png",
+           
+        },
+        {
+            "name" : "pendant3",
+            "link" : "image/3.png",
+           
+        },
+                {
+            "name" : "pendant4",
+            "link" : "image/4.png",
+           
+        },
+                {
+            "name" : "pendant5",
+            "link" : "image/5.png",
+           
+        }
+        
+    ]
+};
+
 var catlistitemPH = '<img src="%data%" id = "%number%" class="backgroundindex thumbimg">';
 var textstyleitemPH = '<img src="%data%" id = "%number%" class="textindex thumbimg">';
+var pendantitemPH = '<img src="%data%" id = "%number%" width:100px height:100px class="pendantindex thumbimg">';
 
 
 $(document).ready(function() {
@@ -131,8 +169,17 @@ $(document).ready(function() {
       }
     };
 
+    plib.plist = function() {
+      for (ps in plib.p) {
+        var pitem = pendantitemPH .replace("%data%" , plib.p[ps].link).replace("%number%" , ps);
+        plib.pitems[ps] = plib.p[ps].name;
+        $('.pendants').append(pitem);
+      }
+    };
+
     catimagelib.namelist();
     textlib.stylelist();
+    plib.plist();
     //$(".background").children().first().addClass("active");
 
     $(".backgroundindex").click(
