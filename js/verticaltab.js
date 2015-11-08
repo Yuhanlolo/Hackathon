@@ -1,3 +1,36 @@
+var catimagelib = {
+    nameitems : [],
+    "images" : [
+        {
+            "name" : "bg1",
+            "link" : "images/bg1.jpg",
+           
+        },
+        {
+            "name" : "bg2",
+            "link" : "images/bg2.jpg",
+           
+        },
+        {
+            "name" : "bg3",
+            "link" : "images/bg3.jpg",
+           
+        },
+        {
+            "name" : "bg4",
+            "link" : "images/bg4.jpg",
+           
+        }
+        
+    ]
+};
+
+var catimagestart = '<div class="row imagestart"></div>';
+var catimagePH = '<div class="col-md-8 col-sm-6 col-xs-12"><img class="catslib" id="%number%" src="%data%"></div>';
+var catnamePH = '<div class="col-md-2"><h2>%data%</h2></div>';
+var catclickerPH = '<div class="col-md-2 col-sm-3 col-xs-12"><p class="clickcount">Click: </p></div>';
+var catlistitemPH = '<img src="%data%" width="250" height="100">';
+
 $(document).ready(function() {
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
         e.preventDefault();
@@ -7,29 +40,24 @@ $(document).ready(function() {
         $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
         $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
-    $( "#bg1" ).click(function() {
-  		$(".bg2").hide();
-      $(".bg3").hide();
-      $(".bg4").hide();
-      $(".bg1").show();
-	  });
-    $( "#bg2" ).click(function() {
-      $(".bg1").hide();
-      $(".bg3").hide();
-      $(".bg4").hide();
-      $(".bg2").show();
+    catimagelib.namelist = function() {
+      for (cat in catimagelib.images) {
+        var catlistitem = catlistitemPH.replace("%data%" , catimagelib.images[cat].link);
+        catimagelib.nameitems[cat] = catimagelib.images[cat].name;
+        $('.catnamelist').append(catlistitem);
+      }
+    };
+
+    catimagelib.namelist();
+    $(".catnamelist").children().first().addClass("active");
+    $("li").click(
+    function () {
+        var idnumber = $(this).attr('id');
+        $(".nav li").removeClass('active');
+        $(this).addClass('active');
+        var catimagelink = catimagelib.images[idnumber].link;
+        $(".ecard").children().attr("src" , catimagelink).attr("id" , idnumber);
     });
-    $( "#bg3" ).click(function() {
-      $(".bg1").hide();
-      $(".bg2").hide();
-      $(".bg4").hide();
-      $(".bg3").show();
-    });
-    $( "#bg4" ).click(function() {
-      $(".bg1").hide();
-      $(".bg2").hide();
-      $(".bg3").hide();
-      $(".bg4").show();
-    });
+
 });
 
