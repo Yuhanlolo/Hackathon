@@ -57,8 +57,11 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
 div.bhoechie-tab-content{
   background-color: #ffffff;
   /* border: 1px solid #eeeeee; */
-  padding-left: 20px;
+  padding-left: 10px;
   padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
 }
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){
@@ -102,4 +105,9 @@ p,a,h1,h2,h3,h4 {
 .row {
     margin-left:0;
     margin-right:0;
+}
+
+.scrollwindow {
+    height: 490px;
+    overflow: scroll;
 }

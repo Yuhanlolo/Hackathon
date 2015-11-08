@@ -20,7 +20,19 @@ var catimagelib = {
             "name" : "bg4",
             "link" : "images/bg4.jpg",
            
+        },
+        {
+            "name" : "bg5",
+            "link" : "images/style1.jpg",
+
+        },
+        {
+            "name" : "bg6",
+            "link" : "images/style2.jpg",
+
         }
+
+
         
     ]
 };
@@ -64,8 +76,8 @@ var textlib = {
 };
 
 
-var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="backgroundindex">';
-var textstyleitemPH = '<img src="%data%" id = "%number%" width="250" height="100" class="textindex">';
+var catlistitemPH = '<img src="%data%" id = "%number%" width="100%" class="backgroundindex" style="padding-top:10px; padding-bottom:10px">';
+var textstyleitemPH = '<img src="%data%" id = "%number%" width="100%" class="textindex" style="padding-top:10px; padding-bottom:10px">';
 
 
 $(document).ready(function() {
@@ -116,4 +128,5 @@ $(document).ready(function() {
     });
 
 });
+
 

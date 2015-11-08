@@ -36,7 +36,7 @@
             <div class="row">
                 <!-- vertical tab -->
 
-                    <div class="col-lg-4 col-md-4 bhoechie-tab-container" style = "margin-left:0px">
+                    <div class="col-lg-4 col-md-4 bhoechie-tab-container" style = "margin-left:0px; background-color: #F99359; height:500px">
                         <div class="col-lg-3 col-md-3 bhoechie-tab-menu">
                             <div class="list-group">
                                 <a href=" " class="list-group-item active text-center tabbutton">
@@ -53,17 +53,17 @@
                                 </a >
                             </div>
                         </div>
-                        <div class="col-lg-9 col-md-9 bhoechie-tab">
+                        <div class="col-lg-9 col-md-9 bhoechie-tab" style="padding:0; height:498px;background-color:white">
 
                             <div class="bhoechie-tab-content active">
 
-                                <div class="background">
+                                <div class="background scrollwindow">
                                 </div>
                                 </div>
 
 
                             <div class="bhoechie-tab-content">
-                                <div class="greetingtext">
+                                <div class="greetingtext scrollwindow">
                                     
                                 </div>
                             </div>
@@ -88,13 +88,16 @@
 
                 <div class="col-lg-8 col-md-8 bhoechie-tab-container" style = "background-color:grey;height:500px;">
                     <div style="padding: 10px">
-                        <div id="mycard" style="width: 90%;height: 90%;">
+                        <div id="mycard">
                             <div class="ecard">
+
                                 <div class="text" style="font-size:14em;color:#ffffff;position: absolute;padding-left:40px;margin-right:auto;padding-top:40px;">
+
                                     <h3>Can Can Shi Ben Dan</h3>
                                 </div>
-                                <img src="images/bg1.jpg" id="0" width="855" height="480">
-                                
+                                <img src="images/bg1.jpg" class="img-responsive" id="0" >
+
+
                             </div> 
                         </div>
                     </div>
@@ -107,30 +110,18 @@
             </div>
 
     </section>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
 
     <script type="text/javascript">
-    $(document).ready(function() {
-    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
-        e.preventDefault();
-        $(this).siblings('a.active').removeClass("active");
-        $(this).addClass("active");
-        var index = $(this).index();
-        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
-        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
-    });
-    $( "div.bhoechie-tab>div.bhoechie-tab-content" ).click(function() {
-      var index = $(this).index();
-      $(".ecard").show();
-    });
+
     $("#btn1").on("click", function(event) {
-      html2canvas(document.getElementById("mycard"), {
-      onrendered: function(canvas) {
-      var img = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-      window.location.href=img; 
-        }
+        html2canvas(document.getElementById("mycard"), {
+            onrendered: function (canvas) {
+                var img = canvas.toDataURL("image/jpeg", 1.0).replace("image/jpeg", "image/octet-stream");
+                window.location.href = img;
+            }
+        });
     });
-    });
-});
 
     </script>
 
