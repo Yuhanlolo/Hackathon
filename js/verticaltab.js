@@ -51,16 +51,11 @@ $(document).ready(function() {
 
     catimagelib.namelist();
     //$(".background").children().first().addClass("active");
-<<<<<<< HEAD
-    $(".background").click(
-    function () {
-        var idnumber = $(this).attr('id');
-=======
+
     $(".clickindex").click(
     function () {
         var idnumber = $(this).attr('id');
         console.log(idnumber);
->>>>>>> origin/master
         //$(".ecard").removeClass('active');
         //$(this).addClass('active');
         var catimagelink = catimagelib.images[idnumber].link;
