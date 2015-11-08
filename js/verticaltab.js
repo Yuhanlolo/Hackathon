@@ -4,22 +4,26 @@ var catimagelib = {
         {
             "name" : "bg1",
             "link" : "images/bg1.jpg",
-           
+            "x":"500px",
+            "y":"60px",
         },
         {
             "name" : "bg2",
             "link" : "images/bg2.jpg",
-           
+            "x":"240px",
+            "y":"130px",
         },
         {
             "name" : "bg3",
             "link" : "images/bg3.jpg",
-           
+            "x":"230px",
+            "y":"130px",
         },
         {
             "name" : "bg4",
             "link" : "images/bg4.jpg",
-           
+            "x":"250px",
+            "y":"110px",
         }
         
     ]
@@ -34,8 +38,7 @@ var textlib = {
             "color": "#bf567d",
             "size" : "23px",
             "family":"Noteworthy",
-            "x":"500px",
-            "y":"60px",
+            
            
         },
         {
@@ -44,8 +47,7 @@ var textlib = {
             "color": "#3e4754",
             "size" : "28px",
             "family":"Tekton Pro",
-            "x":"240px",
-            "y":"130px",
+            
         },
         {
             "name" : "style2",
@@ -53,8 +55,7 @@ var textlib = {
             "color": "#ffffff",
             "size" : "35px",
             "family":"optima",
-            "x":"230px",
-            "y":"130px",
+            
            
         },
         {
@@ -63,8 +64,7 @@ var textlib = {
             "color": "#ffffff",
             "size" : "28px",
             "family":"Nueva Std",
-            "x":"250px",
-            "y":"110px",
+            
            
         },
         {
@@ -189,18 +189,19 @@ $(document).ready(function() {
     function () {
         var idnumber = $(this).attr('id');
         var catimagelink = catimagelib.images[idnumber].link;
+        var Dleft = catimagelib.images[idnumber].x;
+        var Dtop = catimagelib.images[idnumber].y;
         $(".ecard").children().attr("src" , catimagelink).attr("id", idnumber);
+        $(".textbox").css({'margin-left': Dleft, 'margin-top':Dtop});
     });
 
     $(".textindex").click(
     function () {
         var idnumber = $(this).attr('id');
         var textcolor = textlib.styles[idnumber].color;
-        var Dleft = textlib.styles[idnumber].x;
-        var Dtop = textlib.styles[idnumber].y;
         var Fsize = textlib.styles[idnumber].size;
         var FFamiy = textlib.styles[idnumber].family;
-        $(".text").css({'font-size':Fsize, 'color':textcolor, 'font-family':FFamiy, 'padding-left':Dleft, 'padding-top':Dtop});
+        $(".text").css({'font-size':Fsize, 'color':textcolor, 'font-family':FFamiy});
     });
 
 });
