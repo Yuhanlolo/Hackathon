@@ -25,11 +25,7 @@ var catimagelib = {
     ]
 };
 
-var catimagestart = '<div class="row imagestart"></div>';
-var catimagePH = '<div class="col-md-8 col-sm-6 col-xs-12"><img class="catslib" id="%number%" src="%data%"></div>';
-var catnamePH = '<div class="col-md-2"><h2>%data%</h2></div>';
-var catclickerPH = '<div class="col-md-2 col-sm-3 col-xs-12"><p class="clickcount">Click: </p></div>';
-var catlistitemPH = '<img src="%data%" width="250" height="100">';
+var catlistitemPH = '<img src="%data%" id = "%number%" width="250" height="100">';
 
 $(document).ready(function() {
     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
@@ -40,23 +36,24 @@ $(document).ready(function() {
         $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
         $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
+
     catimagelib.namelist = function() {
       for (cat in catimagelib.images) {
-        var catlistitem = catlistitemPH.replace("%data%" , catimagelib.images[cat].link);
+        var catlistitem = catlistitemPH.replace("%data%" , catimagelib.images[cat].link).replace("%number%" , cat);
         catimagelib.nameitems[cat] = catimagelib.images[cat].name;
         $('.background').append(catlistitem);
       }
     };
 
     catimagelib.namelist();
-    $(".catnamelist").children().first().addClass("active");
-    $("li").click(
+    //$(".background").children().first().addClass("active");
+    $(".background").click(
     function () {
         var idnumber = $(this).attr('id');
-        $(".nav li").removeClass('active');
-        $(this).addClass('active');
+        //$(".ecard").removeClass('active');
+        //$(this).addClass('active');
         var catimagelink = catimagelib.images[idnumber].link;
-        $(".ecard").children().attr("src" , catimagelink).attr("id" , idnumber);
+        $(".ecard").children().attr("src" , catimagelink).attr("id", idnumber);
     });
 
 });
