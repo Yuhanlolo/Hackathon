@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="jquery/jquery-ui.css">
+</head>
+<style>
+#back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	width: 100%;
+}
+
+div.basic {
+	display: block;
+	width: 58%;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto; 
+	text-align: center;
+	z-index: 0;
+}
+
+div.title {
+	display: block;
+	width: 30%;
+	margin-top: 0.5%;
+	margin-left: auto;
+	margin-right: auto; 
+	text-align: center;
+	z-index: 0;
+}
+
+
+div.delete{
+	position: fixed;
+	top: 40%;
+	left: 80%;
+	max-width: 20%;
+	z-index: 0;
+}
+
+div.star{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+	width: 100%;
+}
+
+img.center{
+	display:block;
+	margin:auto;
+	max-width:100%;
+}
+
+img.head{
+	display: inline;
+	margin-top: 0px;
+}
+
+#title {
+	margin-left: 2%;
+	margin-right: 1%;
+	max-width: 82%;
+}
+
+#bulb {
+	margin-right: 0px;
+	max-width: 10%;
+	cursor: pointer;
+}
+
+#cross{
+    max-width: 100px;
+	display: none;
+	
+}
+
+#star{
+	max-width: 100%;
+	animation: blink 5s infinite;
+	-webkit-animation:blink 5s infinite; /*Safari and Chrome*/
+}
+
+@keyframes blink
+{
+	0%  {opacity: 0.3;}
+	20% {opacity: 0.65;}
+	40% {opacity: 1;}
+	60% {opacity: 1;}
+	80% {opacity: 0.65;}
+	100% {opacity: 0.3;}
+}
+
+@-webkit-keyframes blink /*Safari and Chrome*/
+{
+	
+	0%  {opacity: 0.3;}
+	20% {opacity: 0.65;}
+	40% {opacity: 1;}
+	60% {opacity: 1;}
+	80% {opacity: 0.65;}
+	100% {opacity: 0.3;
+}
+
+
+</style>
+
+<title>Happy Thanks giving Day!</title>
+</head>
+
+<body>
+<!-- <img id="back" src="image/redbackground.png" /> -->
+
+<!-- <div class = "star">
+<img id="star" src="image/star.png" />
+</div> -->
+
+<div class = "basic">
+<img class="center" id="tree" src="image/card1.png" />
+
+</div>
+
+<!-- <div class = "title">
+<img class="head" id="title" src="image/title.png"  />
+<img class="head" id="bulb" src="image/bulboff.png"  />
+</div> -->
+
+<div class = "delete">
+<img  id="cross" src="image/cross.png" />
+</div>
+
+
+<script src="jquery/jquery.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+<script src="jquery/jquery-ui-min.js"></script>
+<script src="basics.js"></script>
+
+
+</body>
+
+</html>
