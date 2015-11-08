@@ -58,7 +58,7 @@ $(document).ready(function() {
       for (cat in catimagelib.images) {
         var catlistitem = catlistitemPH.replace("%data%" , catimagelib.images[cat].link);
         catimagelib.nameitems[cat] = catimagelib.images[cat].name;
-        $('.catnamelist').append(catlistitem);
+        $('.background').append(catlistitem);
       }
     };
 
