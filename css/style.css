@@ -4,8 +4,6 @@ div.bhoechie-tab-container{
   z-index: 10;
   background-color: #ffffff;
   padding: 0 !important;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
   border:1px solid #ddd;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -40,9 +38,9 @@ div.bhoechie-tab-menu div.list-group>a:last-child{
 div.bhoechie-tab-menu div.list-group>a.active,
 div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
 div.bhoechie-tab-menu div.list-group>a.active .fa{
-  background-color: #5A55A3;
-  background-image: #5A55A3;
-  color: #ffffff;
+  background-color: white;
+  background-image: white;
+  color: #FB7125;
 }
 div.bhoechie-tab-menu div.list-group>a.active:after{
   content: '';
@@ -53,7 +51,7 @@ div.bhoechie-tab-menu div.list-group>a.active:after{
   border-left: 0;
   border-bottom: 13px solid transparent;
   border-top: 13px solid transparent;
-  border-left: 10px solid #5A55A3;
+  border-left: 10px solid white;
 }
 
 div.bhoechie-tab-content{
@@ -65,4 +63,43 @@ div.bhoechie-tab-content{
 
 div.bhoechie-tab div.bhoechie-tab-content:not(.active){
   display: none;
+}
+
+.tabbutton {
+  height: 60px;
+    font-size: 12px;
+    background-color: #E3D8D4;
+    border: 0px solid white;
+    font-weight: 500;
+
+
+}
+
+.tabbutton > a.active {
+    background-color: white;
+}
+
+p,a,h1,h2,h3,h4 {
+  font-family: font-family: 'Raleway', sans-serif;
+}
+
+.tabtext {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.footer {
+    margin: 20px 0 20px 0;
+}
+
+#titleimg {
+    display: inline;
+    position: absolute;
+    height: 80px;
+}
+
+
+.row {
+    margin-left:0;
+    margin-right:0;
 }
