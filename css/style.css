@@ -111,3 +111,24 @@ p,a,h1,h2,h3,h4 {
     height: 490px;
     overflow: scroll;
 }
+
+.tabcontent {
+    margin-left: 0px;
+    background-color: #F99359;
+    height: 500px;
+}
+
+.thunmbnailimg {
+    padding: 0;
+    height: 498px;
+    background-color: white;
+}
+
+.text {
+    font-size: 14em;
+    color: #ffffff;
+    position: absolute;
+    padding-left: 40px;
+    margin-right: auto;
+    padding-top: 40px;
+}
